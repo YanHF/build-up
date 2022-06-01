@@ -1,10 +1,13 @@
 package com.yanhf.algorithm.sort;
 
 import java.util.Arrays;
+import java.util.ConcurrentModificationException;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class QuickSort {
 
     private static int partition(Integer[] arr, int start, int end) {
+        //ReentrantLock
         // 确定枢轴元素
         int pivot = arr[start];
         // 定义两个指针（引用），一个指向数组左端，一个指向数组右端
